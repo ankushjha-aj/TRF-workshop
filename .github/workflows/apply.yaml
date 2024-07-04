@@ -26,7 +26,7 @@ on:
 jobs:
   terraform:
     name: "Terraform"
-    uses: Artiscien-Corporation/infra-shared-module/.github/workflows/terraform-apply.yaml@feature/infra
+    uses: ankushjha-aj/terraform-worflow/.github/workflows/terraform-apply.yaml@main
     
     # Input parameters for the job
     with:
@@ -36,5 +36,5 @@ jobs:
     # Secrets needed for the job (GH_INFRA_PAT and GCP_SVC_CREDS)
     secrets:
       GH_INFRA_PAT: ${{ secrets.ARTISCIEN_GH_PAT }}
-      role-to-assume: "arn:aws:iam::905418236236:role/Terraform-Github-Action"
-      role-session-name: "Terraform-Github-Action"
+      role-to-assume: ""
+      role-session-name: ""
