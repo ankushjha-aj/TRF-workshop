@@ -1,0 +1,3 @@
+region: "us-east-1" # Change this to your desired region
+org_name: "ankush"
+app_name: "workflow"

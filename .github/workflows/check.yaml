@@ -1,0 +1,16 @@
+name: Check
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read
+on:
+  pull_request:
+    # On any pull requests to $default-branch
+    branches: ['main']
+jobs:
+  terraform:
+    name: "Terraform"
+    uses: Artiscien-Corporation/infra-shared-module/.github/workflows/terraform-check.yaml@feature/infra
+    secrets:
+      GH_INFRA_PAT: ${{ secrets.ARTISCIEN_GH_PAT }}
+      role-to-assume: "arn:aws:iam::905418236236:role/Terraform-Github-Action"
+      role-session-name: "Terraform-Github-Action"

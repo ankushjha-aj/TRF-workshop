@@ -1,0 +1,37 @@
+aws_instance_type: t2.micro
+aws_ami: ami-09040d770ffe2224f
+
+vpc_cidr_block: "10.0.0.0/16"
+domain_name: "example.com"
+domain_name_servers: ["8.8.8.8", "8.8.4.4"]
+
+bucket_name: my-bucket-dev-1
+
+public_subnet_conf:
+  public_subnet_1:
+    name: "public_subnet_1"
+    cidr_block: "10.0.1.0/24"
+    availability_zone: "us-east-2a"
+  public_subnet_2:
+    name: "public_subnet_2"
+    cidr_block: "10.0.2.0/24"
+    availability_zone: "us-east-2b"
+  public_subnet_3:
+    name: "public_subnet_3"
+    cidr_block: "10.0.3.0/24"
+    availability_zone: "us-east-2c"
+
+private_subnet_conf:
+  private_subnet_1:
+    name: "private_subnet_1"
+    cidr_block: "10.0.4.0/24"
+    availability_zone: "us-east-2a"
+  private_subnet_2:
+    name: "private_subnet_2"
+    cidr_block: "10.0.5.0/24"
+    availability_zone: "us-east-2b"
+  private_subnet_3:
+    name: "private_subnet_3"
+    cidr_block: "10.0.6.0/24"
+    availability_zone: "us-east-2c"
+
