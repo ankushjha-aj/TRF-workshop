@@ -21,7 +21,7 @@ on:
 jobs:
   terraform-apply:
     name: "Terraform apply"
-    uses: Artiscien-Corporation/infra-shared-module/.github/workflows/workflow-trigger.yaml@feature/infra
+    uses: ankushjha-aj/terraform-worflow/.github/workflows/terraform-apply.yaml@main
     # Input parameters for the job
     with:
       workflow: apply # Triggering the 'apply' workflow
