@@ -4,7 +4,7 @@ resource "aws_s3_bucket" "my_bucket" {
   bucket = "tf-stateyourtf" # Change this to a unique bucket name
 
   tags = {
-    Name        = "My bucket"
+    Name        = "tf-stateyourtf"
     Environment = "Dev"
   }
 }

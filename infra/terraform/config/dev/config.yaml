@@ -1,11 +1,11 @@
 aws_instance_type: t2.micro
-aws_ami: ami-09040d770ffe2224f
+aws_ami: ami-04a81a99f5ec58529
 
 vpc_cidr_block: "10.0.0.0/16"
 domain_name: "example.com"
 domain_name_servers: ["8.8.8.8", "8.8.4.4"]
 
-bucket_name: my-bucket-dev-1
+bucket_name: tf-stateyourtf
 
 public_subnet_conf:
   public_subnet_1:

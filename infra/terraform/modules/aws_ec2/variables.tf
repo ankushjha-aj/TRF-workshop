@@ -23,8 +23,8 @@ variable "app_name" {
 }
 
 
-# variable "public_subnet_id" {
-#   type        = map(string)
-#   description = "Map of subnet IDs"
-#   default     = {}
-# }
+variable "public_subnet_id" {
+  type        = map(string)
+  description = "Map of subnet IDs"
+  default     = {}
+}
