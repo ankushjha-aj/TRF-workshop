@@ -22,14 +22,9 @@ variable "app_name" {
   default     = ""
 }
 
-variable "env" {
-  type        = string
-  description = "Environment Name"
-  default     = ""
-}
 
-variable "public_subnet_id" {
-  type        = map(string)
-  description = "Map of subnet IDs"
-  default     = {}
-}
+# variable "public_subnet_id" {
+#   type        = map(string)
+#   description = "Map of subnet IDs"
+#   default     = {}
+# }

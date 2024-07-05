@@ -15,11 +15,10 @@ module "aws_ec2" {
   source            = "./modules/aws_ec2"
   aws_instance_type = lookup(local.configs, "aws_instance_type")
   # public_subnet_conf  = lookup(local.configs, "public_subnet_conf")
-  public_subnet_id = module.aws_subnets.public_subnet_ids
+  # public_subnet_id = module.aws_subnets.public_subnet_ids
   aws_ami          = lookup(local.configs, "aws_ami")
   org_name         = lookup(local.configs, "org_name")
   app_name         = lookup(local.configs, "app_name")
-  env              = terraform.workspace
 }
 
 # # Module for vpc
