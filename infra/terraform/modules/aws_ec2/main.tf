@@ -11,5 +11,5 @@ resource "aws_instance" "instance" {
 
 resource "aws_key_pair" "my_key_pair" {
   key_name   = "my-key-pair"
-  public_key = file("${path.root}/test-pub.pub")
+  public_key = file("${path.module}/test-pub.pub")
 }
