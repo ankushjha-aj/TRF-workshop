@@ -35,6 +35,6 @@ jobs:
     
     # Secrets needed for the job (GH_INFRA_PAT and GCP_SVC_CREDS)
     secrets:
-      GH_INFRA_PAT: ${{ secrets.ARTISCIEN_GH_PAT }}
+      GH_INFRA_PAT: ${{ secrets.ANKUSH_GH_PAT }}
       role-to-assume: ""
       role-session-name: ""
