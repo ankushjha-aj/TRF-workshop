@@ -12,5 +12,5 @@ jobs:
     uses: ankushjha-aj/terraform-worflow/.github/workflows/terraform-check.yaml@main
     secrets:
       GH_INFRA_PAT: ${{ secrets.ANKUSH_GH_PAT }}
-      role-to-assume: "arn:aws:iam::767397793170:role/gh-role"
-      role-session-name: "github-actions-${{ github.run_id }}"
+      role-to-assume: "arn:aws:iam::975050300138:role/github-oidc-connect"
+      role-session-name: "github-oidc-connect"

@@ -37,4 +37,4 @@ jobs:
     secrets:
       GH_INFRA_PAT: ${{ secrets.ANKUSH_GH_PAT }}
       role-to-assume: "arn:aws:iam::975050300138:role/github-oidc-connect"
-      role-session-name: "github-actions-${{ github.run_id }}"
+      role-session-name: "github-oidc-connect"
