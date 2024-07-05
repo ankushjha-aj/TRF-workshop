@@ -12,5 +12,5 @@ jobs:
     uses: ankushjha-aj/terraform-worflow/.github/workflows/terraform-check.yaml@main
     secrets:
       GH_INFRA_PAT: ${{ secrets.ANKUSH_GH_PAT }}
-      role-to-assume: ""
-      role-session-name: ""
+      role-to-assume: "arn:aws:iam::767397793170:role/gh-role"
+      role-session-name: "gh-role"
