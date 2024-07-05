@@ -125,9 +125,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_INFRA_PAT }}
 
-  # Job to Apply Terraform Changes
+  # Job to Destroy Terraform-managed infrastructure
   Destroy:
-    needs: [ref, Plan]
+    needs: [ref]
     name: "Destroy (${{ inputs.env }})"
     runs-on: ubuntu-latest
     concurrency: terraform-${{ inputs.env }}
@@ -155,17 +155,11 @@ jobs:
         with:
           version: 'v3.7.3' # default is latest stable
         id: install
-      # Download terraform plan artifact
-      - name: Restore terraform plan
-        uses: actions/download-artifact@v2
-        with:
-          name: terraform.plan
-          path: infra/terraform
       # Initialize Terraform workspace
       - name: Terraform init
         run: make ENV=${{ inputs.env }} terraform/init
-      # Apply Terraform changes using the saved execution plan
+      # Destroy Terraform-managed infrastructure
       - name: Terraform Destroy
-        run: make ENV=${{ inputs.env }} TF_CMD_ARGS='-out=terraform.plan' terraform/destroy
+        run: make ENV=${{ inputs.env }} TF_CMD_ARGS='-auto-approve' terraform/destroy
         env:
           GITHUB_TOKEN: ${{ secrets.GH_INFRA_PAT }}
