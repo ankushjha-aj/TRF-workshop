@@ -165,7 +165,7 @@ jobs:
       - name: Terraform init
         run: make ENV=${{ inputs.env }} terraform/init
       # Apply Terraform changes using the saved execution plan
-      - name: Terraform Apply
-        run: make ENV=${{ inputs.env }} TF_CMD_ARGS='-auto-approve terraform.plan' terraform/destroy
+      - name: Terraform Destroy
+        run: make ENV=${{ inputs.env }} TF_CMD_ARGS='-out=terraform.plan' terraform/destroy
         env:
           GITHUB_TOKEN: ${{ secrets.GH_INFRA_PAT }}
