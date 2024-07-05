@@ -37,4 +37,4 @@ jobs:
     secrets:
       GH_INFRA_PAT: ${{ secrets.ANKUSH_GH_PAT }}
       role-to-assume: "arn:aws:iam::767397793170:role/gh-role"
-      # role-session-name: "gh-role"
+      role-session-name: "gh-role"
