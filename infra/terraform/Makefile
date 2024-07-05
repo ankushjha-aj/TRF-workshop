@@ -40,4 +40,4 @@ endif
 	$(TERRAFORM_BIN) workspace show | grep $(ENV) >/dev/null || $(TERRAFORM_BIN) workspace select $(ENV)
 
 terraform/%: terraform/configure
-	$(TERRAFORM_BIN) $(notdir $@) 
+	$(TERRAFORM_BIN) $(notdir $@) -input=false $(TF_CMD_ARGS)
