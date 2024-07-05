@@ -32,4 +32,4 @@ jobs:
     
     # Secrets needed for the job (GH_INFRA_PAT)
     secrets:
-      GH_INFRA_PAT: ${{ secrets.ARTISCIEN_GH_PAT }}
+      GH_INFRA_PAT: ${{ secrets.ANKUSH_GH_PAT }}
