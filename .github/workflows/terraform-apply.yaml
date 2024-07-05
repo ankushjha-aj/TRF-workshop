@@ -121,7 +121,12 @@ jobs:
         run: make ENV=${{ inputs.env }} terraform/init
       # Apply Terraform changes using the saved execution plan
       - name: Terraform Apply
-        run: make ENV=${{ inputs.env }} TF_CMD_ARGS='-auto-approve terraform.plan' terraform/apply
+        run: |
+          make ENV=${{ inputs.env }} TF_CMD_ARGS='-auto-approve terraform.plan' terraform/apply || (
+            echo "Plan is stale. Recreating plan and applying again."
+            make ENV=${{ inputs.env }} terraform/plan
+            make ENV=${{ inputs.env }} TF_CMD_ARGS='-auto-approve' terraform/apply
+          )
         env:
           GITHUB_TOKEN: ${{ secrets.GH_INFRA_PAT }}
 
