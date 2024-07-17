@@ -9,7 +9,7 @@ on:
 jobs:
   terraform:
     name: "Terraform"
-    uses: ankushjha-aj/terraform-worflow/.github/workflows/terraform-check.yaml@main
+    uses: ankushjha-aj/terraform-worflow-makefile/.github/workflows/terraform-check.yaml@main
     secrets:
       GH_INFRA_PAT: ${{ secrets.ANKUSH_GH_PAT }}
       role-to-assume: "arn:aws:iam::975050300138:role/github-oidc-connect"
