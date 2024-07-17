@@ -26,7 +26,7 @@ on:
 jobs:
   terraform:
     name: "Terraform"
-    uses: ankushjha-aj/terraform-worflow/.github/workflows/terraform-apply.yaml@main
+    uses: ankushjha-aj/terraform-worflow-makefile/.github/workflows/terraform-apply.yaml@main
     
     # Input parameters for the job
     with:
