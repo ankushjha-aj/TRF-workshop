@@ -21,7 +21,7 @@ on:
 jobs:
   terraform-apply:
     name: "Terraform apply"
-    uses: ankushjha-aj/terraform-workflow-makefile/.github/workflows/workflow-trigger.yaml@main
+    uses: ankushjha-aj/terraform-worflow-makefile/.github/workflows/workflow-trigger.yaml@main
     # Input parameters for the job
     with:
       workflow: apply # Triggering the 'apply' workflow
