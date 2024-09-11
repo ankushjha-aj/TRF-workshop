@@ -5,7 +5,7 @@ permissions:
 on:
   pull_request:
     # On any pull requests to $default-branch
-    branches: ['main']
+    branches: ['vpc-test']
 jobs:
   terraform:
     name: "Terraform"

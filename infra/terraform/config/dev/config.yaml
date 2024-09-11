@@ -2,6 +2,9 @@ aws_instance_type: t2.micro
 aws_ami: ami-04a81a99f5ec58529
 
 vpc_cidr_block: "10.0.0.0/16"
+org_name: ankush
+app_name: workflow
+env: dev
 domain_name: "example.com"
 domain_name_servers: ["8.8.8.8", "8.8.4.4"]
 
@@ -34,4 +37,5 @@ private_subnet_conf:
     name: "private_subnet_3"
     cidr_block: "10.0.6.0/24"
     availability_zone: "us-east-1c"
+  
 

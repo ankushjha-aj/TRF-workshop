@@ -1,7 +1,17 @@
-variable "vpc_id" {
-  type        = string
-  description = "The ID of vpc"
-  default     = ""
+variable "org_name" {
+  type = string
+}
+
+variable "app_name" {
+  type = string
+}
+
+variable "env" {
+  type = string
+}
+
+variable "vpc_cidr_block" {
+  type = string
 }
 
 variable "public_subnet_conf" {
@@ -22,8 +32,10 @@ variable "private_subnet_conf" {
   default = {}
 }
 
-variable "env" {
-  type        = string
-  description = "Name of Environment "
-  default     = ""
+variable "domain_name" {
+  type = string
+}
+
+variable "domain_name_servers" {
+  type = list(string)
 }

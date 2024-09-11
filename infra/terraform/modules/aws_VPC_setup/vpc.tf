@@ -1,8 +1,5 @@
-# Resource for creating VPC
 resource "aws_vpc" "aws_test_vpc" {
   cidr_block = var.vpc_cidr_block
-  # Enabling automatic hostname assigning
-  # enable_dns_hostnames = true
   tags = {
     Name = "${var.org_name}-${var.app_name}-${var.env}-vpc"
   }
