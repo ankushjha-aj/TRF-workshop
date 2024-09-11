@@ -132,7 +132,7 @@ jobs:
 
   # Job to Destroy Terraform-managed infrastructure
   Destroy:
-    needs: [ref, Plan]
+    needs: [ref, Plan, Apply]
     name: "Destroy (${{ inputs.env }})"
     runs-on: ubuntu-latest
     concurrency: terraform-${{ inputs.env }}
