@@ -110,9 +110,9 @@ jobs:
         with:
           version: 'v3.7.3' # default is latest stable
         id: install
-      # Download terraform plan artifact
+      # Download the terraform plan artifact
       - name: Restore terraform plan
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: terraform.plan
           path: infra/terraform
