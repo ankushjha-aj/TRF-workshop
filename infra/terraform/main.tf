@@ -12,7 +12,7 @@ module "config" {
 
 # Module for VPC-SETUP
 module "aws_VPC_setup" {
-  source = "./modules/aws_VPC_setup"
+  source = "./modules/aws_vpc"
   vpc_cidr_block      = lookup(local.configs, "vpc_cidr_block")
   domain_name         = lookup(local.configs, "domain_name")
   domain_name_servers = lookup(local.configs, "domain_name_servers")
